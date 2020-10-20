@@ -1,10 +1,183 @@
 .App {
   text-align: center;
+  background-color: rgb(33, 33, 33);
+}
+
+.App-main{
+  color: white;
+  min-height: 100vh;
+  background-color: #212121;
+  padding-top: 10px;
+ 
+}
+
+.menuBtn{
+  color: black;
+  font-size: 3px;
+  padding-right: 5px;
+  margin-right: 10px;
+  background-color: black;
+  float: left;
+  margin-right: 30px;
+
+}
+
+.homeBtn{
+  color: black;
+  font-size: 3px;
+  padding-right: 5px;
+  background-color: black;
+  float: right;
+  margin-left: 10px;
+}
+
+.loginBtn{
+  color: black;
+  font-size: 3px;
+  padding-right: 5px;
+  background-color: black;
+
+  float: right;
+}
+
+.signupBtn{
+  color: black;
+  font-size: 3px;
+  padding-right: 5px;
+  margin-right: 10px;
+  background-color: black;
+  float: right;
+}
+
+.App-header {
+  text-align: right;
+  background-color:  black;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Btn1 {
+  background-color: #ffa507;
+  color: white;
+  border-radius: 3em;
+  border:none;
+  font-size: 5px;
+  font-weight: bolder;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+ .email-control{
+  font-size: 3px;
+  font-weight: bolder;
+  padding-right: 40px;
+  
+}
+
+.pwd-control{
+  font-size: 3px;
+  font-weight: bolder;
+  padding-right: 10px;
+}
+
+.repwd-control{
+  font-size: 3px;
+  font-weight: bolder;
+  padding-right: 20px;
+}
+
+.name-control{
+  font-size: 3px;
+  font-weight: bolder;
+  padding-right: 32px;
+}
+
+.phone-control{
+  font-size: 3px;
+  font-weight: bolder;
+  padding-right: 65px;
+}
+
+.exphone{
+  font-size: 0.1px;
+  color: rgba(0,0,0,.6);
+  padding-right: 90px;
+  margin-bottom: 7px;
+}
+.formphone-control{
+  width: 100px;
+  margin-right: 10px;
+  margin-left: 3px;
+}
+
+
+.confirm-Btn{
+  background-color: internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  border:none;
+  font-size: 5px;
+  font: 400 10px Arial;
+  font-weight: 600;
+  color: -internal-light-dark(black, white);
+  cursor: pointer;
+}
+.reconfirm-Btn{
+  margin-top: 10px;
+  
+}
+
+.reconfirm-control{
+  margin-bottom: 7px;
+}
+
+.agree-control1{
+  font-size: 0.1px;
+}
+
+
+
+.agree-control2{
+  font-size: 0.1px;
+  margin-top: 2%;
+  margin-left: 18%;
+
+}
+
+.signupFinish{
+  background-color: #ffa507;
+  border-color: #ffa507;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  flex: 1 0 auto;
+  justify-content: inherit;
+  line-height: normal;
+  position: relative;
+  border:none;
+  border-radius: 4px;
+}
+
+.check1{
+  margin-left: 0%;
+  cursor: pointer;
+  background-color: #ffa507;
+}
+
+.check2{
+  margin-left: 13.6%;
+  cursor: pointer;
+  background-color: #ffa507;
+}
+
+.check3{
+  margin-left: 12%;
+  cursor: pointer;
+  color: #ffa507;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +186,21 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
+}
+
+.myForm{
+  margin-left: 30%;
+  background-color: white;
+  padding-right: 50px;
+  width: 40%;
+  height: 500px;
+}
+
+.form-main{
+  padding-left: 35px;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +210,8 @@
   to {
     transform: rotate(360deg);
   }
+
+
+  
+  
 }

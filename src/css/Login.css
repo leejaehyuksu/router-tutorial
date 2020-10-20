@@ -1,0 +1,44 @@
+.myLogin{
+    margin-left: 33%;
+    background-color: white;
+    padding-right: 3%;
+    width: 30%;
+    height: 230px;
+}
+.password-control{
+    margin-right: 10%;
+    font-size: 3px;
+    font-weight: bolder;
+    padding-right: 10%;
+}
+.Loginemail-control{
+    font-size: 3px;
+    font-weight: bolder;
+    margin-right: 10%;
+    padding-right: 10;
+}
+.LoginFinish{
+    background-color: #ffa507;
+  border-color: #ffa507;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  flex: 1 0 auto;
+  justify-content: inherit;
+  line-height: normal;
+  position: relative;
+  border:none;
+  border-radius: 4px;
+  margin-left: 30px;
+}
+.LoginSignupBtn{
+  color: black;
+  font-size: 1px;
+  padding-right: 5px;
+  margin-right: 10px;
+  float: center;
+  margin-right: 30px;
+}
+.Loginform-control{
+  margin-bottom: 10px;
+}
