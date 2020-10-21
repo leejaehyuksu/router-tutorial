@@ -1,9 +1,8 @@
 .myLogin{
-    margin-left: 33%;
+    margin-left: 35%;
     background-color: white;
-    padding-right: 3%;
     width: 30%;
-    height: 230px;
+    padding-bottom: 10%;
 }
 .password-control{
     margin-right: 10%;
@@ -18,7 +17,8 @@
     padding-right: 10;
 }
 .LoginFinish{
-    background-color: #ffa507;
+  font-size: 200%;
+  background-color: #ffa507;
   border-color: #ffa507;
   color: white;
   cursor: pointer;
@@ -28,17 +28,48 @@
   line-height: normal;
   position: relative;
   border:none;
+  margin-top: 5%;
   border-radius: 4px;
   margin-left: 30px;
 }
 .LoginSignupBtn{
   color: black;
-  font-size: 1px;
-  padding-right: 5px;
-  margin-right: 10px;
-  float: center;
-  margin-right: 30px;
+  font-size: 150%;
+  
 }
 .Loginform-control{
   margin-bottom: 10px;
+}
+.Logo{
+  background-color:  #212121;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.Loginemail-control{
+  padding-right: 3%;
+  padding-top: 5%;
+  font-size: 150%;
+}
+
+#emailInput{
+  border-style: solid;
+  border-color: #ffa507;
+  border-width: 3px;
+  margin-top: 1%;
+  margin-left: 15%;
+  width: 80%;
+}
+
+.password-control{
+  padding-top: 5%;
+  font-size: 150%;
+}
+#pwdInput{
+  border-style: solid;
+  border-color: #ffa507;
+  border-width: 3px;
+  margin-top: 1%;
+  margin-left: 15%;
+  width: 80%;  
 }

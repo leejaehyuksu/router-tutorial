@@ -1,14 +1,25 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import Home from './Home';
-import './App.css';
+import './css/App.css';
+import './css/Empty.css';
 
  
 const Empty = () => {
   return (
-    <div className="App-main">
-    <button><Link to="/">홈으로가기</Link></button>
-    <Route path="/" component={Home} exact={true} />
+ 
+  <div id="mainWrapper">
+    <ul>
+       <ul id ="ulTable">
+                    <li>
+                        <ul>
+                            <li>No</li>
+                            <li>제목</li>
+                            <li>작성일</li>
+                            <li>작성자</li>
+                            <li>조회수</li>
+                        </ul>
+                    </li>
+        </ul>
+      </ul>
     </div>
   );
 };

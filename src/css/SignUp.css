@@ -1,0 +1,129 @@
+.SignUpForm{
+    background-color: white;
+    
+}
+
+.Logo{
+    background-color:  #212121;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.Signemail-control{
+    padding-right: 5%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+#SignemailInput{
+    border-style: solid;
+    border-color: #ffa507;
+    border-width: 3px;
+    margin-left: 39%;
+    width: 30%;
+}
+
+.Signpwd-control{
+    padding-right: 0.5%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+#SignpwdInput{
+    border-style: solid;
+    border-color: #ffa507;
+    border-width: 3px;
+    margin-left: 39%;
+    width: 30%;
+}
+.Signrepwd-control{
+    padding-right: 1%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+.Signname-control{
+    padding-right: 3%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+#SignnameInput{
+    border-style: solid;
+    border-color: #ffa507;
+    border-width: 3px;
+    margin-left: 39%;
+    width: 30%;
+}
+.Signphone-control{
+    padding-right: 8%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+#SignphoneInput{
+    border-style: solid;
+    border-color: #ffa507;
+    border-width: 3px;
+    margin-left: 39%;
+    width: 30%;
+}
+
+.exphone{
+    font-size: 20px;
+    color: rgba(0,0,0,.6);
+    margin-right: 11%;
+  }
+
+  .check1{
+    margin-left: 3.1%;
+    cursor: pointer;
+    background-color: #ffa507;
+  }
+  
+  .check2{
+    margin-left: 8.7%;
+    cursor: pointer;
+    background-color: #ffa507;
+  }
+  
+  .check3{
+    margin-left: 8%;
+    cursor: pointer;
+    color: #ffa507;
+  }
+
+  .agree-control{
+    font-size: 20px;
+  }
+
+  .form-main{
+    font-size: 250%;
+    padding-top: 2%;
+  }
+
+  .agree-control2{
+    font-size: 80%;
+    padding-right: 1%;
+  }
+
+  .signupFinish{
+    font-size: 200%;
+    background-color: #ffa507;
+    border-color: #ffa507;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    border:none;
+    margin-top: 1%;
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-bottom: 10%;
+  }

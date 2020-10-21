@@ -1,0 +1,26 @@
+.App-mainpage{
+    color: white;
+    background-color: #212121;
+    padding-bottom: 20%
+}
+
+.Main-content{
+    font-size: 100px;
+}
+
+.Home-mainpage{
+    background-color: #212121;
+}
+
+.CustomBtn {
+    background-color: #ffa507;
+    border-radius: 3em;
+    border:none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+ 
+.form-main{
+    font-size: 250%;
+  }
+  

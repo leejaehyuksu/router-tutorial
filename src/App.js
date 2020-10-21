@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
 import { Route, Link } from 'react-router-dom';
 import About from './About';
 import Empty from './Empty';
@@ -8,22 +8,37 @@ import Home from './Home';
 import Signup from './Signup';
 import imgA from './img/imgA.png';
 
+const NewLi = (props) => {
+  return(
+    <li className={props.cls}>
+      <Link to={props.to} className={props.linkCss}>{props.text}</Link>
+    </li>
+  )
+}
+ /* <li className="menuBtn">
+          <Link to="/empty" style={{ textDecoration: 'none', color:'white'}}>작품</Link>
+        </li>  */
 
 const App = () => {
   return (
-    <div className="App">
-      <br/>
-        <img src={ imgA } width='300' height='30' alt='imgA' />
+    <div className="App-main">
+      <div className="Top-main">
+        <img src={ imgA } width='700' height='70' alt='imgA' />
+      </div>
       <header className="App-header">
       <ul>
-        <li className="menuBtn"><Link to="/empty" style={{ textDecoration: 'none',color:'white' }}>작품</Link></li>
-        <li className="menuBtn"><Link to="/empty" style={{ textDecoration: 'none',color:'white' }}>아티스트</Link></li>
-        <li className="menuBtn"><Link to="/empty" style={{ textDecoration: 'none',color:'white' }}>공모전</Link></li>
-        <li className="menuBtn"><Link to="/about" style={{ textDecoration: 'none',color:'white' }}>샵</Link></li>
-        <li className="homeBtn"><Link to="/" style={{ textDecoration: 'none',color:'white' }}>홈으로가기</Link></li>
-        <li className="loginBtn"><Link to="/login" style={{ textDecoration: 'none',color:'white' }}>로그인</Link></li>
-        <li className="signupBtn"><Link to="/signup" style={{ textDecoration: 'none',color:'white' }}>회원가입</Link></li>
+        <NewLi cls='menuBtn' to="/empty" linkCss='linkCss' text="작품" />
+        <NewLi cls='menuBtn' to="/empty" linkCss='linkCss' text="아티스트" />
+        <NewLi cls='menuBtn' to="/empty" linkCss='linkCss' text="공모전" />
+        <NewLi cls='menuBtn' to="/about" linkCss='linkCss' text="샵" />
+        <NewLi cls='homeBtn' to="/" linkCss='linkCss' text="홈으로가기" />
+        <NewLi cls='signupBtn' to="/signup" linkCss='linkCss' text="회원가입" />
+        <NewLi cls='loginBtn' to="/login" linkCss='linkCss' text="로그인" />
         </ul>
+         {/* <li className="menuBtn">
+          <Link to="/empty" style={{ textDecoration: 'none', color:'white'}}>작품</Link>
+        </li>  */}
+
       </header>
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
