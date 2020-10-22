@@ -16,11 +16,25 @@
     background-color: #ffa507;
     border-radius: 3em;
     border:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 30px;
     font-weight: bolder;
+    margin-bottom: 5%;
+    
+}
+#Customtext{
+    color: black;
+    text-decoration: none;
 }
  
 .form-main{
     font-size: 250%;
   }
-  
+
+.imgCss{
+    width: 250px;
+    height: 250px;
+  }

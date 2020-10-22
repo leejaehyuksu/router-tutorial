@@ -1,5 +1,5 @@
 .SignUpForm{
-    background-color: white;
+    background-color: #F8F7F7;
     
 }
 
@@ -123,7 +123,9 @@
     position: relative;
     border:none;
     margin-top: 1%;
-    border-radius: 4px;
+    border-radius: 20px;
     margin-left: 30px;
     margin-bottom: 10%;
+    padding-right: 10px;
+    padding-left: 10px;
   }

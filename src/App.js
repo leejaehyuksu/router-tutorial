@@ -1,11 +1,11 @@
 import React from 'react';
 import './css/App.css';
 import { Route, Link } from 'react-router-dom';
-import About from './About';
-import Empty from './Empty';
-import Login from './Login';
-import Home from './Home';
-import Signup from './Signup';
+import About from './components/List/About';
+import Empty from './components/Empty/Empty';
+import Login from './components/Login/Login';
+import Home from './components/Home/Home';
+import Signup from './components/SignUp/Signup';
 import imgA from './img/imgA.png';
 
 const NewLi = (props) => {
@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="App-main">
       <div className="Top-main">
-        <img src={ imgA } width='700' height='70' alt='imgA' />
+        <img src={ imgA } width='700' height='70' alt='' />
       </div>
       <header className="App-header">
       <ul>

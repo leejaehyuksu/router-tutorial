@@ -4,8 +4,8 @@ import Pagination from './pagination';
 export default class MoviesPage extends Component {
   getMovies = () => {
     const movies = [
-      { id: 0, title: "기생충", genre: "블랙 코미디", release: "2019-05-30" },
-      { id: 1, title: "라이온 킹", genre: "애니메이션", release: "2019-07-17" },
+      { id: 0, name: "홍길동", email: "test1@naver.com", age: "15" },
+      { id: 1, name: "김길동", email: "test2@gmail.com", age: "20" },
     ]
     return movies;
   }
@@ -23,24 +23,24 @@ export default class MoviesPage extends Component {
 
     return (
       <React.Fragment>
-        <p>showing {count} movies in the database.</p>
+        <p> {count} 명이 조회되었습니다</p>
 
         <table className="table">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Title</th>
-              <th>Genre</th>
-              <th>Release</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
             </tr>
           </thead>
           <tbody>
             {this.state.movies.map(movie =>
               <tr key={movie.id}>
                 <td>{movie.id}</td>
-                <td>{movie.title}</td>
-                <td>{movie.genre}</td>
-                <td>{movie.release}</td>
+                <td>{movie.name}</td>
+                <td>{movie.email}</td>
+                <td>{movie.age}</td>
               </tr>
             )}
           </tbody>

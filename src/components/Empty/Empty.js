@@ -1,6 +1,6 @@
 import React from 'react';
-import './css/App.css';
-import './css/Empty.css';
+import './../../css/App.css';
+import './Empty.css';
 
  
 const Empty = () => {
