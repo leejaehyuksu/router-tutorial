@@ -1,19 +1,29 @@
+.form-login{
+  float: center;
+  border: 1px solid black ;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  margin-left: 32%;
+  margin-right: 50%;
+}
 .myLogin{
     
-    background-color:#F8F7F7;
+    background-color:#212121;
     padding-bottom: 10%;
+
 }
 .password-control{
-    margin-right: 10%;
+    margin-right: 8%;
     font-size: 3px;
     font-weight: bolder;
-    padding-right: 1%;
+    padding-right: 3%;
     padding-top: 1%;
   font-size: 150%;
 }
 .Loginemail-control{
     font-weight: bolder;
-    margin-right: 10%;
+    margin-right: 8%;
     padding-top: 2%;
     font-size: 150%;
     
@@ -21,23 +31,28 @@
 }
 .LoginFinish{
   font-size: 200%;
-  background-color: #ffa507;
-  border-color: #ffa507;
-  color: white;
-  cursor: pointer;
-  align-items: center;
-  flex: 1 0 auto;
-  justify-content: inherit;
-  line-height: normal;
-  position: relative;
-  border:none;
-  margin-top: 2%;
-  border-radius: 4px;
-  margin-right: 2%;
+    background-color: #ffa507;
+    border-color: #ffa507;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    border:none;
+    margin-top: 1%;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-left: 10px;
+    margin-bottom: 10%;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .LoginSignupBtn{
-  color: black;
-  font-size: 150%;
+  font-size: 125%;
+  padding-right: 20%;
+  text-decoration: underline;
   
 }
 .Loginform-control{
@@ -54,8 +69,8 @@
   border-color: #ffa507;
   border-width: 3px;
   margin-top: 1%;
-  margin-left: 35%;
-  width: 30%;
+  margin-left: 23%;
+  width: 50%;
 }
 
 #pwdInput{
@@ -63,6 +78,7 @@
   border-color: #ffa507;
   border-width: 3px;
   margin-top: 1%;
-  margin-left: 35%;
-  width: 30%;  
+  margin-left: 23.5%;
+  width: 50%;  
 }
+

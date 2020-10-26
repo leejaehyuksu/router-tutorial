@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Pagination from './pagination';
+import './About.css';
 
 export default class MoviesPage extends Component {
   getMovies = () => {
     const movies = [
       { id: 0, name: "홍길동", email: "test1@naver.com", age: "15" },
       { id: 1, name: "김길동", email: "test2@gmail.com", age: "20" },
+      { id: 2, name: "김길동", email: "test2@gmail.com", age: "20" },
+      { id: 3, name: "김길동", email: "test2@gmail.com", age: "20" },
+      { id: 4, name: "김길동", email: "test2@gmail.com", age: "20" },
+      { id: 5, name: "김길동", email: "test2@gmail.com", age: "20" },
+      { id: 6, name: "김길동", email: "test2@gmail.com", age: "20" },
+
     ]
     return movies;
   }
@@ -19,14 +26,14 @@ export default class MoviesPage extends Component {
     const { length: count } = this.state.movies;
 
     if (count === 0)
-      return <p>There are no movies in the database.</p>
+      return <p>0명이 조회되었습니다.</p>
 
     return (
       <React.Fragment>
-        <p> {count} 명이 조회되었습니다</p>
+        <div className="countTable"> {count} 명이 조회되었습니다.</div>
 
         <table className="table">
-          <thead>
+          <thead className="listTable">
             <tr>
               <th>ID</th>
               <th>Name</th>
