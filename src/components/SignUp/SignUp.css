@@ -9,7 +9,7 @@
   border: 1px solid black ;
   background-color: white;
   width: 700px;
-  height: 1000px;
+  height: 800px;
   margin-left: 32%;
   margin-right: 50%;
 }
@@ -134,7 +134,7 @@
     border:none;
     margin-top: 5%;
     border-radius: 20px;
-    margin-left: 30px;
+    margin-left: 15px;
     margin-bottom: 10%;
     padding-right: 20px;
     padding-left: 20px;

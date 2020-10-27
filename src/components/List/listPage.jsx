@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Pagination from './pagination';
 import './About.css';
+//import Axios from 'axios';
+//import { useEffect, useState } from 'react';
 
 export default class MoviesPage extends Component {
   getMovies = () => {

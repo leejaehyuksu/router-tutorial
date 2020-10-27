@@ -4,6 +4,7 @@ import './SignUp.css';
 import imgA from './../../img/imgA.png';
 import Axios from 'axios';
 
+
 const SignUpDiv = (props) => {
   return (
     <div className="form-group">
@@ -30,6 +31,7 @@ const SignUpAgree = (props) => {
 /* <input type = "checkbox" className="check1"></input>
           <label className="agree-control"></label> */
 
+
 const Signup = () => {
   return (
     <div className="App">
@@ -47,9 +49,9 @@ const Signup = () => {
           <SignUpAgree cls="check2" text="email을 통해 작품, 아티스트, 이벤트 소식을 받겠습니다." />
           <SignUpAgree cls="check3" text="요청한 대화에 새 답변이 있을 경우,알림을 받겠습니다." />
           <p className="agree-control2">(선택 해제시 커스텀 상담 중 실시간 알림을 받을수 없습니다.)*</p>
-          <button type="submit" className="signupFinish" onClick={joinUser}>
+          <button type="submit" className="signupFinish" onClick={joinUser} >
             회원가입
-        </button>
+          </button>
         </div>
       </div>
     </div>
@@ -63,6 +65,7 @@ const joinUser = () => {
   user.age = document.getElementById('age').value;
   console.log(document.getElementById('email').value);
 
+
   Axios({
     method: 'POST',
     url: '/api/users',
@@ -73,7 +76,10 @@ const joinUser = () => {
       age: user.age
     }
   });
-
+  return (
+    alert('로그인 후 이용가능합니다. '),
+    window.location.href = '/'
+  )
 
 }
 export default Signup;

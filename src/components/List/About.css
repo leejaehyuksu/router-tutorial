@@ -1,10 +1,4 @@
-.listTable{
+.head{
     background-color: #ffc107;
 }
-.countTable{
-    color: white;
-    background-color: #212121;
-    font-size: 30px;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-}
+
