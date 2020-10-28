@@ -4,6 +4,7 @@ import imgA from '../../img/imgA.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 const LoginDiv = (props) => {
   return (
     <div className="form-group">
@@ -47,12 +48,21 @@ const LoginUser = async () => {
 
   const { data: post } = await axios.post('/api/users/login', user);
   console.log(post);
-  return (
-    alert('로그인 성공'),
-    window.location.href = '/'
-  )
 
+  if (post.email != null && post.password != null) {
+    sessionStorage.setItem('user', JSON.stringify(post)); // 쿠키같은
+    console.log('세션저장완료');
 
+    return (
+      alert('로그인 성공'),
+      window.location.href = "/"
+    )
+
+  } else {
+    alert('존재하지 않거나 잘못 입력된 정보입니다.');
+    document.getElementById('email').value = '';
+    document.getElementById('password').value = '';
+  }
 
 }
 export default Login;

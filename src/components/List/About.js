@@ -1,15 +1,17 @@
-import TablePagination from '@material-ui/core/TablePagination';
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Paper from '@material-ui/core/Paper';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TablePagination from '@material-ui/core/TablePagination';
+import TableRow from '@material-ui/core/TableRow';
 import './About.css';
 
-
 const columns = [
-  {
-    id: 'select',
-    label: '선택',
-    minWidth: 300,
-  },
+
   { id: 'id', label: 'No.', minWidth: 100, minHight: 100, format: (value) => value.toLocaleString('en-US'), },
   { id: 'name', label: '이름', minWidth: 350 },
   { id: 'email', label: '이메일', minWidth: 350 },
@@ -29,25 +31,8 @@ const columns = [
     format: (value) => value.toFixed(2),
   },
 
+
 ];
-
-const UserBody = (props) => {
-  console.log(props.trigger)
-  props.trigger(1)
-  return (
-    props.data.map((d) => (
-      <tr key={d.id}>
-        <td><input type="checkbox" value={d.id} /></td>
-        <td cname={d.id}> {d.id} </td>
-        <td name={d.name}>{d.name}</td>
-        <td name={d.email}>{d.email}</td>
-        <td style={{ textAlign: 'center' }} name={d.age}>{d.age}</td>
-        <td style={{ textAlign: 'center' }} name={d.password}>{d.password}</td>
-      </tr>
-    ))
-
-  )
-}
 
 export default function UserListTable() {
   const [page, setPage] = React.useState(0);
@@ -64,62 +49,69 @@ export default function UserListTable() {
   };
 
   // 회원목록 가져오기
-  // const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
-  const [state, setState] = useState([]);
-  const [trgger, setTrigger] = useState(0);
-
-
-  // useEffect(() => {
-  //     Axios.get("/api/users")
-  //         .then((res) => {
-  //             let userArray = res.data;
-  //             console.log(userArray);
-  //             setUsers(userArray);
-  //         });
-  // }, []);
   useEffect(() => {
     Axios.get("/api/users")
-      .then(data => {
-        setState(data.data);
-        //data.data.map( (d) => userBody(d))
-      })
-  }, [trgger])
+      .then((res) => {
+        let userArray = res.data;
+        console.log(userArray);
+        setUsers(userArray);
+      });
+  }, []);
 
   return (
-    <>
-      <div className="body">
-        <div className="head">
-          <h1>User List</h1>
-          <p>회원 목록</p>
-        </div>
-        <table>
-          <thead>
-            <tr>
+    <Paper id="root">
+      <div className="header">
+        <h1>회원 리스트</h1>
+      </div>
+      <TableContainer className="MuiPaper-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded">
+        {/* <div className="serchbar">
+          <input type="text" />
+          <button>조회</button>
+        </div> */}
+        <Table stickyHeader aria-label="sticky table">
+          <TableHead>
+            <TableRow>
               {columns.map((column) => (
-                <td key={column.id}
+                <TableCell
+                  key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
                 >
                   {column.label}
-                </td>
+                </TableCell>
               ))}
-            </tr>
-          </thead>
-          <tbody className="userListheader">
-            <UserBody data={state} trigger={setTrigger} />
-          </tbody>
-        </table>
-      </div>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+              return (
+                <TableRow tabIndex={-1} key={row.id}>
+                  {columns.map((column) => {
+                    const value = row[column.id];
+                    return (
+                      <TableCell key={column.id} align={column.align}>
+                        {column.format && typeof value === 'number' ? column.format(value) : value}
+                      </TableCell>
+                    );
+                  })}
+
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
       <TablePagination
         rowsPerPageOptions={[5, 10, 25, 100]}
         component="div"
-        count={columns.length}
+        count={users.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
       />
-    </>
+    </Paper>
   );
 }

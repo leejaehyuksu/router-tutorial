@@ -1,0 +1,11 @@
+.btnCss {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: none;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+
+  }
+  

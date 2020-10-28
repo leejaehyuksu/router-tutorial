@@ -77,7 +77,7 @@ const joinUser = () => {
     }
   });
   return (
-    alert('로그인 후 이용가능합니다. '),
+    alert('회원가입 완료!!'),
     window.location.href = '/'
   )
 

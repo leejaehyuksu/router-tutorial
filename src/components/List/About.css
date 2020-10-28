@@ -2,3 +2,15 @@
     background-color: #ffc107;
 }
 
+.OutFinish{
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 3%; 
+    background-color: #ffa507;
+    border-radius: 3em;
+    border:none;
+    cursor: pointer;
+}

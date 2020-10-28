@@ -127,6 +127,12 @@
 .reconfirm-Btn{
   margin-top: 10px;  
 }
+.pCss{
+  background-color: #212121;
+  color: white;
+  margin-bottom: -1px;
+  
+}
 
 .reconfirm-control{
   margin-bottom: 7px;
